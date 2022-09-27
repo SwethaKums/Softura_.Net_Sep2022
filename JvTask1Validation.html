@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form id="frm">
+        <label for="name">UserName</label>
+        <input type="text" id="usern" name="userName" />
+        <label for="pasword">Password</label>
+        <input type="password" id="passw" name="password" />
+        <button type="button" onclick="validation()">login</button>
+    </form>
+   <script>
+       let count = 0;
+       function validation() {
+
+           let usna = document.getElementById('usern').value;
+           let pswd=document.getElementById('passw').value
+
+           if (usna ==pswd) {
+               document.write("you have login successfully");
+           } else {
+               if (count == 3) {
+                   window.close();
+               } else {
+                       document.getElementById('usern').value = null;
+                   document.getElementById('passw').value = null;
+                   alert("Invalid details");
+                   count++;
+                  
+               }
+
+           }
+       }
+    </script>
+
+</body>
+
+</html>
+
+    
