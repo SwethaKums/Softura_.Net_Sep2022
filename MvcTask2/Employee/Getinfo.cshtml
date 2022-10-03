@@ -1,0 +1,13 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_Layout";
+    ViewData["title"] = "single info";
+}
+<h2>The Single Employee Info</h2>
+<h3>The Employee id is @Model.EmpId</h3>
+<h3>The Employee FirstName is @Model.EmpFirstName</h3>
+<h3>The Employee LastName is @Model.EmpLastName</h3>
+<h3>The Employee Gender is @Model.EmpGender</h3>
+<a asp-action="Getallinfo" asp-controller="Employee">GetAllInfo</a>
